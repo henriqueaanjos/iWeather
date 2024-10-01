@@ -15,6 +15,7 @@ describe("Storage: CityStorage", () => {
 
     });
     it('should return null if city not exists in Storage', async() => {
+        await removeStorageCity();
         const response = await getStorageCity();
         expect(response).toBeNull();
     });
